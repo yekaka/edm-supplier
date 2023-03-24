@@ -1,0 +1,187 @@
+package com.xfei.mailgun.api.v3;
+
+import com.xfei.mailgun.model.ResponseWithMessage;
+import com.xfei.mailgun.model.routes.Route;
+import com.xfei.mailgun.model.routes.RoutesListResponse;
+import com.xfei.mailgun.model.routes.RoutesPageRequest;
+import com.xfei.mailgun.model.routes.RoutesRequest;
+import com.xfei.mailgun.model.routes.RoutesResponse;
+import com.xfei.mailgun.model.routes.SingleRouteResponse;
+import com.xfei.mailgun.api.MailgunApi;
+import feign.Headers;
+import feign.Param;
+import feign.QueryMap;
+import feign.RequestLine;
+import feign.Response;
+
+/**
+ * <p>
+ * Mailgun Routes Api
+ * </p>
+ * <p>
+ * Mailgun Routes are a powerful way to handle the incoming traffic.
+ * </p>
+ * <p>
+ * See
+ * <a href="https://documentation.mailgun.com/en/latest/user_manual.html#um-routes">user-manual/Routes</a>
+ * section in the User Manual to learn more about how they work.
+ * </p>
+ * <p>
+ * This API allows you to work with routes programmatically.
+ * <p>
+ * Routes are comprised of the following arguments:
+ * </p>
+ * <pre>
+ * A filter (when to do something).
+ * A priority (in what order).
+ * An action (what to do).
+ * </pre>
+ *
+ * @see <a href="https://documentation.mailgun.com/en/latest/api-routes.html">Routes</a>
+ */
+@Headers("Accept: application/json")
+public interface MailgunRoutesApi extends MailgunApi {
+
+    /**
+     * <p>
+     * Fetches the list of routes (limit to 100 entries).
+     * </p>
+     * Note: that routes are defined globally, per account, not per domain as most of other API calls.
+     *
+     * @return {@link com.xfei.mailgun.model.routes.RoutesListResponse}
+     */
+    @RequestLine("GET /routes")
+    RoutesListResponse getRoutesList();
+
+    /**
+     * <p>
+     * Fetches the list of routes (limit to 100 entries).
+     * </p>
+     * Note: that routes are defined globally, per account, not per domain as most of other API calls.
+     *
+     * @return {@link Response}
+     */
+    @RequestLine("GET /routes")
+    Response getRoutesListFeignResponse();
+
+    /**
+     * <p>
+     * Fetches the list of routes.
+     * </p>
+     * Note: that routes are defined globally, per account, not per domain as most of other API calls.
+     *
+     * @param pageRequest {@link com.xfei.mailgun.model.routes.RoutesPageRequest}
+     * @return {@link RoutesListResponse}
+     */
+    @RequestLine("GET /routes")
+    RoutesListResponse getRoutesList(@QueryMap RoutesPageRequest pageRequest);
+
+    /**
+     * <p>
+     * Fetches the list of routes.
+     * </p>
+     * Note: that routes are defined globally, per account, not per domain as most of other API calls.
+     *
+     * @param pageRequest {@link RoutesPageRequest}
+     * @return {@link Response}
+     */
+    @RequestLine("GET /routes")
+    Response getRoutesListFeignResponse(@QueryMap RoutesPageRequest pageRequest);
+
+    /**
+     * <p>
+     * Returns a single route object based on its ID.
+     * </p>
+     *
+     * @param id ID of the route
+     * @return {@link com.xfei.mailgun.model.routes.SingleRouteResponse}
+     */
+    @RequestLine("GET /routes/{id}")
+    SingleRouteResponse getSingleRoute(@Param("id") String id);
+
+    /**
+     * <p>
+     * Returns a single route object based on its ID.
+     * </p>
+     *
+     * @param id ID of the route
+     * @return {@link Response}
+     */
+    @RequestLine("GET /routes/{id}")
+    Response getSingleRouteFeignResponse(@Param("id") String id);
+
+    /**
+     * <p>
+     * Creates a new route.
+     * </p>
+     *
+     * @param request {@link com.xfei.mailgun.model.routes.RoutesRequest}
+     * @return {@link com.xfei.mailgun.model.routes.RoutesResponse}
+     */
+    @Headers("Content-Type: multipart/form-data")
+    @RequestLine("POST /routes")
+    RoutesResponse createRoute(RoutesRequest request);
+
+    /**
+     * <p>
+     * Creates a new route.
+     * </p>
+     *
+     * @param request {@link RoutesRequest}
+     * @return {@link Response}
+     */
+    @Headers("Content-Type: multipart/form-data")
+    @RequestLine("POST /routes")
+    Response createRouteFeignResponse(RoutesRequest request);
+
+    /**
+     * <p>
+     * Updates a given route by ID.
+     * </p>
+     * All parameters are optional: this API call only updates the specified fields leaving others unchanged.
+     *
+     * @param id      ID of the route
+     * @param request {@link RoutesRequest}
+     * @return {@link com.xfei.mailgun.model.routes.Route}
+     */
+    @Headers("Content-Type: multipart/form-data")
+    @RequestLine("PUT /routes/{id}")
+    Route updateRoute(@Param("id") String id, RoutesRequest request);
+
+    /**
+     * <p>
+     * Updates a given route by ID.
+     * </p>
+     * All parameters are optional: this API call only updates the specified fields leaving others unchanged.
+     *
+     * @param id      ID of the route
+     * @param request {@link RoutesRequest}
+     * @return {@link Response}
+     */
+    @Headers("Content-Type: multipart/form-data")
+    @RequestLine("PUT /routes/{id}")
+    Response updateRouteFeignResponse(@Param("id") String id, RoutesRequest request);
+
+    /**
+     * <p>
+     * Deletes a route based on the id.
+     * </p>
+     *
+     * @param id ID of the route
+     * @return {@link com.xfei.mailgun.model.ResponseWithMessage}
+     */
+    @RequestLine("DELETE /routes/{id}")
+    ResponseWithMessage deleteRoute(@Param("id") String id);
+
+    /**
+     * <p>
+     * Deletes a route based on the id.
+     * </p>
+     *
+     * @param id ID of the route
+     * @return {@link Response}
+     */
+    @RequestLine("DELETE /routes/{id}")
+    Response deleteRouteFeignResponse(@Param("id") String id);
+
+}
