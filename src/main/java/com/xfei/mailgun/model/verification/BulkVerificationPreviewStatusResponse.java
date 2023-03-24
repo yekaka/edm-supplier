@@ -8,8 +8,8 @@ import lombok.Builder;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
 
-import static com.xfei.mailgun.util.Constants.ENGLISH;
-import static com.xfei.mailgun.util.Constants.RFC_2822_DATE_TIME_PATTERN_TIME_ZONE_NAME;
+import static com.xfei.util.Constants.ENGLISH;
+import static com.xfei.util.Constants.RFC_2822_DATE_TIME_PATTERN_TIME_ZONE_NAME;
 
 /**
  * <p>

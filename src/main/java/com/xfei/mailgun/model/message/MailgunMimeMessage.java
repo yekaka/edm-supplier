@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.xfei.mailgun.util.CollectionUtil;
-import com.xfei.mailgun.util.StringUtil;
+import com.xfei.util.CollectionUtil;
+import com.xfei.util.StringUtil;
 import feign.form.FormProperty;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

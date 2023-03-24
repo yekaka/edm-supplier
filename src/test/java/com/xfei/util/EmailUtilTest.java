@@ -1,4 +1,4 @@
-package com.xfei.mailgun.util;
+package com.xfei.util;
 
 import com.xfei.mailgun.constants.TestConstants;
 import org.junit.jupiter.api.Test;

@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.Set;
 
-import static com.xfei.mailgun.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
+import static com.xfei.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
 
 /**
  * <p>

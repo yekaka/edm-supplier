@@ -5,9 +5,9 @@ import java.util.concurrent.Executors;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xfei.mailgun.api.MailgunApi;
 import com.xfei.mailgun.form.FormEncoder;
-import com.xfei.mailgun.util.ConsoleLogger;
-import com.xfei.mailgun.util.MailgunApiUtil;
-import com.xfei.mailgun.util.ObjectMapperUtil;
+import com.xfei.util.ConsoleLogger;
+import com.xfei.util.MailgunApiUtil;
+import com.xfei.util.ObjectMapperUtil;
 import feign.AsyncClient;
 import feign.AsyncFeign;
 import feign.Client;
@@ -22,7 +22,7 @@ import feign.jackson.JacksonEncoder;
 import feign.querymap.FieldQueryMapEncoder;
 import lombok.experimental.UtilityClass;
 
-import static com.xfei.mailgun.util.Constants.DEFAULT_BASE_URL_US_REGION;
+import static com.xfei.util.Constants.MAILGUN_DEFAULT_BASE_URL_US_REGION;
 
 /**
  * <p>
@@ -76,7 +76,7 @@ public class MailgunClient {
             Executors.newSingleThreadExecutor()
         );
 
-        private String baseUrl = DEFAULT_BASE_URL_US_REGION;
+        private String baseUrl = MAILGUN_DEFAULT_BASE_URL_US_REGION;
         private final String apiKey;
 
         /**

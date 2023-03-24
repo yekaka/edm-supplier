@@ -2,7 +2,7 @@ package com.xfei.mailgun.utils;
 
 import com.xfei.mailgun.constants.TestConstants;
 import com.xfei.mailgun.model.message.MessageResponse;
-import com.xfei.mailgun.util.StringUtil;
+import com.xfei.util.StringUtil;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass

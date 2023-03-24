@@ -1,4 +1,4 @@
-package com.xfei.mailgun.util;
+package com.xfei.util;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.Module;

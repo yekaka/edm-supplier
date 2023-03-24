@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Collections;
 
-import static com.xfei.mailgun.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
+import static com.xfei.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -11,9 +11,9 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.xfei.mailgun.enums.YesNo;
 import com.xfei.mailgun.enums.YesNoHtml;
-import com.xfei.mailgun.util.CollectionUtil;
-import com.xfei.mailgun.util.DateTimeUtil;
-import com.xfei.mailgun.util.StringUtil;
+import com.xfei.util.CollectionUtil;
+import com.xfei.util.DateTimeUtil;
+import com.xfei.util.StringUtil;
 import feign.form.FormData;
 import feign.form.FormProperty;
 import lombok.Builder;
@@ -21,7 +21,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import static com.xfei.mailgun.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
+import static com.xfei.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
 
 /**
  * The object is used for sending messages(emails) using Mailgun API.

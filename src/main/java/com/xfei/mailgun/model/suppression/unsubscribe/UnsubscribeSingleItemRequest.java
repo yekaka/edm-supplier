@@ -1,6 +1,6 @@
 package com.xfei.mailgun.model.suppression.unsubscribe;
 
-import com.xfei.mailgun.util.DateTimeUtil;
+import com.xfei.util.DateTimeUtil;
 import feign.form.FormProperty;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package com.xfei.mailgun.util;
+package com.xfei.util;
 
 import com.xfei.mailgun.exception.MailGunException;
 import lombok.experimental.UtilityClass;

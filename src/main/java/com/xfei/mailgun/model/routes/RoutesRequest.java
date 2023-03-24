@@ -1,6 +1,6 @@
 package com.xfei.mailgun.model.routes;
 
-import com.xfei.mailgun.util.CollectionUtil;
+import com.xfei.util.CollectionUtil;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

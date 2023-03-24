@@ -1,4 +1,4 @@
-package com.xfei.mailgun.util;
+package com.xfei.util;
 
 import feign.Logger;
 import lombok.extern.slf4j.Slf4j;

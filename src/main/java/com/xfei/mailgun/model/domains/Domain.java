@@ -12,8 +12,8 @@ import lombok.extern.jackson.Jacksonized;
 
 import java.time.ZonedDateTime;
 
-import static com.xfei.mailgun.util.Constants.ENGLISH;
-import static com.xfei.mailgun.util.Constants.RFC_2822_DATE_TIME_PATTERN_TIME_ZONE_NAME;
+import static com.xfei.util.Constants.ENGLISH;
+import static com.xfei.util.Constants.RFC_2822_DATE_TIME_PATTERN_TIME_ZONE_NAME;
 
 /**
  * Domain information

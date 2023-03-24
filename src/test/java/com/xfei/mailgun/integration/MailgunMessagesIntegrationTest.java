@@ -23,7 +23,7 @@ import com.xfei.mailgun.client.MailgunClient;
 import com.xfei.mailgun.model.message.MailgunMimeMessage;
 import com.xfei.mailgun.model.message.Message;
 import com.xfei.mailgun.model.message.MessageResponse;
-import com.xfei.mailgun.util.ObjectMapperUtil;
+import com.xfei.util.ObjectMapperUtil;
 import feign.Request;
 import feign.Response;
 import feign.form.FormData;

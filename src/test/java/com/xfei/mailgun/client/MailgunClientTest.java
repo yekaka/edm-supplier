@@ -3,8 +3,8 @@ package com.xfei.mailgun.client;
 import com.xfei.mailgun.constants.TestConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xfei.mailgun.api.v3.MailgunMessagesApi;
-import com.xfei.mailgun.util.ConsoleLogger;
-import com.xfei.mailgun.util.ObjectMapperUtil;
+import com.xfei.util.ConsoleLogger;
+import com.xfei.util.ObjectMapperUtil;
 import feign.Feign;
 import feign.Logger;
 import feign.Request;
@@ -19,8 +19,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.xfei.mailgun.util.Constants.DEFAULT_BASE_URL_US_REGION;
-import static com.xfei.mailgun.util.Constants.EU_REGION_BASE_URL;
+import static com.xfei.util.Constants.MAILGUN_DEFAULT_BASE_URL_US_REGION;
+import static com.xfei.util.Constants.MAILGUN_EU_REGION_BASE_URL;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class MailgunClientTest {
@@ -35,7 +35,7 @@ class MailgunClientTest {
         assertNotNull(mailgunMessagesApiUS);
 
 //        For EU servers
-        MailgunMessagesApi mailgunMessagesApiEU = MailgunClient.config(EU_REGION_BASE_URL, TestConstants.TEST_API_KEY)
+        MailgunMessagesApi mailgunMessagesApiEU = MailgunClient.config(MAILGUN_EU_REGION_BASE_URL, TestConstants.TEST_API_KEY)
                 .createApi(MailgunMessagesApi.class);
 
         assertNotNull(mailgunMessagesApiEU);
@@ -70,7 +70,7 @@ class MailgunClientTest {
                 .errorDecoder(new ErrorDecoder.Default())
                 .options(new Request.Options(10, TimeUnit.SECONDS, 60, TimeUnit.SECONDS, true))
                 .requestInterceptor(new BasicAuthRequestInterceptor("api", TestConstants.TEST_API_KEY))
-                .target(MailgunMessagesApi.class, DEFAULT_BASE_URL_US_REGION);
+                .target(MailgunMessagesApi.class, MAILGUN_DEFAULT_BASE_URL_US_REGION);
 
         assertNotNull(mailgunMessagesApi);
     }

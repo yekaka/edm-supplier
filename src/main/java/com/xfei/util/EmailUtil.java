@@ -1,4 +1,4 @@
-package com.xfei.mailgun.util;
+package com.xfei.util;
 
 import lombok.experimental.UtilityClass;
 import org.apache.commons.lang3.StringUtils;

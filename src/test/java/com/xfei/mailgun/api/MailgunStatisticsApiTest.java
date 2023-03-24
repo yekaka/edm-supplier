@@ -18,7 +18,7 @@ import com.xfei.mailgun.model.StatisticsOptions;
 import com.xfei.mailgun.model.stats.Stats;
 import com.xfei.mailgun.model.stats.StatsResult;
 import com.xfei.mailgun.model.stats.StatsTotalValueObject;
-import com.xfei.mailgun.util.StringUtil;
+import com.xfei.util.StringUtil;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.equalTo;

@@ -3,8 +3,8 @@ package com.xfei.mailgun.model;
 import com.xfei.mailgun.enums.Duration;
 import com.xfei.mailgun.enums.ResolutionPeriod;
 import com.xfei.mailgun.enums.StatsEventType;
-import com.xfei.mailgun.util.CollectionUtil;
-import com.xfei.mailgun.util.DateTimeUtil;
+import com.xfei.util.CollectionUtil;
+import com.xfei.util.DateTimeUtil;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NonNull;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.xfei.mailgun.util.Constants.DURATION_MUST_BE_GREATER_THAN_ZERO;
+import static com.xfei.util.Constants.DURATION_MUST_BE_GREATER_THAN_ZERO;
 
 /**
  * <p>

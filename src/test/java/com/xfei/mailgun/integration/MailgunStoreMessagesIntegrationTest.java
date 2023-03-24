@@ -12,7 +12,7 @@ import com.xfei.mailgun.model.events.EventsQueryOptions;
 import com.xfei.mailgun.model.events.EventsResponse;
 import com.xfei.mailgun.model.message.MessageResponse;
 import com.xfei.mailgun.model.message.StoreMessageResponse;
-import com.xfei.mailgun.util.ObjectMapperUtil;
+import com.xfei.util.ObjectMapperUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;

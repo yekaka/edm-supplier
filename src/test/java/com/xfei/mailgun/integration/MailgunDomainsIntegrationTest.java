@@ -32,7 +32,7 @@ import com.xfei.mailgun.model.domains.UpdateDomainClickTrackingSettingsResponse;
 import com.xfei.mailgun.model.domains.UpdateDomainConnectionResponse;
 import com.xfei.mailgun.model.domains.UpdateDomainOpenTrackingSettingsResponse;
 import com.xfei.mailgun.model.domains.UpdateDomainUnsubscribeTrackingSettingsResponse;
-import com.xfei.mailgun.util.ObjectMapperUtil;
+import com.xfei.util.ObjectMapperUtil;
 import feign.Request;
 import feign.Response;
 import org.apache.commons.collections4.CollectionUtils;
@@ -46,7 +46,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.xfei.mailgun.util.Constants.DEFAULT_BASE_URL_US_REGION;
+import static com.xfei.util.Constants.MAILGUN_DEFAULT_BASE_URL_US_REGION;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -110,7 +110,7 @@ class MailgunDomainsIntegrationTest {
         assertEquals("OK", feignResponse.reason());
         Request request = feignResponse.request();
         assertEquals(Request.HttpMethod.GET, request.httpMethod());
-        assertEquals(DEFAULT_BASE_URL_US_REGION + MailgunApi.getApiVersion().getValue() + "/domains", request.url());
+        assertEquals(MAILGUN_DEFAULT_BASE_URL_US_REGION + MailgunApi.getApiVersion().getValue() + "/domains", request.url());
         assertNotNull(feignResponse.body());
         DomainListResponse domainListResponse = ObjectMapperUtil.decode(feignResponse, DomainListResponse.class);
         assertTrue(CollectionUtils.isNotEmpty(domainListResponse.getItems()));

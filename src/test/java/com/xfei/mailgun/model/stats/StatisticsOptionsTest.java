@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Locale;
 
-import static com.xfei.mailgun.util.Constants.DURATION_MUST_BE_GREATER_THAN_ZERO;
+import static com.xfei.util.Constants.DURATION_MUST_BE_GREATER_THAN_ZERO;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;

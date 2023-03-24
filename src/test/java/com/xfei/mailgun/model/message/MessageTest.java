@@ -3,7 +3,7 @@ package com.xfei.mailgun.model.message;
 import com.xfei.mailgun.constants.TestConstants;
 import com.xfei.mailgun.enums.YesNo;
 import com.xfei.mailgun.enums.YesNoHtml;
-import com.xfei.mailgun.util.EmailUtil;
+import com.xfei.util.EmailUtil;
 import feign.form.FormData;
 
 import org.apache.commons.io.IOUtils;
@@ -19,7 +19,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.xfei.mailgun.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
+import static com.xfei.util.Constants.FIELD_CANNOT_BE_NULL_OR_EMPTY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;

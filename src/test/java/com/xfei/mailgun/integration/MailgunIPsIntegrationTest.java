@@ -6,7 +6,7 @@ import com.xfei.mailgun.client.MailgunClient;
 import com.xfei.mailgun.model.ResponseWithMessage;
 import com.xfei.mailgun.model.ips.IPResult;
 import com.xfei.mailgun.model.ips.IPsResult;
-import com.xfei.mailgun.util.ObjectMapperUtil;
+import com.xfei.util.ObjectMapperUtil;
 import feign.Request;
 import feign.Response;
 import org.apache.commons.collections4.CollectionUtils;
