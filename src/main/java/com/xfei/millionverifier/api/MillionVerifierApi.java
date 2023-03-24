@@ -14,16 +14,15 @@ import feign.Response;
  * @author yzq
  * @date 2023/03/24 17:23
  */
-//@Headers("Accept: application/json")
+@Headers({"Accept: application/json","User-Agent:curl/7.64.1"})
 public interface MillionVerifierApi {
 
     @Headers("Content-Type: multipart/form-data")
     @RequestLine("POST /upload?key={apiKey}")
     MillionUploadResponse uploadFile(@Param("apiKey") String apiKey, MillionUploadRequest request);
 
-    @Headers("Content-Type: multipart/form-data")
     @RequestLine("GET /fileinfo?key={apiKey}&file_id={fileId}")
-    MillionUploadResponse getFileInfo(@Param("apiKey") String apiKey,@Param("file_id") Integer fileId);
+    MillionUploadResponse getFileInfo(@Param("apiKey") String apiKey,@Param("fileId") Integer fileId);
 
     @Headers("Content-Type: multipart/form-data")
     @RequestLine("GET /download?key={apiKey}&file_id={fileId}&filter=all")
@@ -31,6 +30,6 @@ public interface MillionVerifierApi {
 
     @Headers({"Content-Type: multipart/form-data", "Accept: application/json"})
     @RequestLine("GET /v3?api={apiKey}&email={email}&timeout=10")
-    Response singleVerify(@Param("apiKey") String apiKey, @Param("email") String email);
+    MillionSingleResponse singleVerify(@Param("apiKey") String apiKey, @Param("email") String email);
 
 }

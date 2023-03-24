@@ -155,8 +155,7 @@ public class MillionVerifierClient {
                     .decoder(DECODER)
                     .queryMapEncoder(QUERY_MAP_ENCODER)
                     .errorDecoder(errorDecoder)
-                    .options(options)
-                    .requestInterceptor(new BasicAuthRequestInterceptor("", ""));
+                    .options(options);
         }
     }
 }

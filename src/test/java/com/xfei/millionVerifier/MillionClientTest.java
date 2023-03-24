@@ -28,7 +28,7 @@ class MillionClientTest {
     @Test
     void VerifyAnEmailAddressTest() {
         String apiKey = "DPKLX54foIX9pHQOOHI0rgTso";
-        Response response = millionVerifierApi.singleVerify(apiKey,"1013200847");
+        MillionSingleResponse response = millionVerifierApi.singleVerify(apiKey,"24148906@qq.com");
         System.out.println(response.toString());
     }
 }
