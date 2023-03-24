@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mailgun</groupId>
-    <artifactId>mailgun-java</artifactId>
+    <groupId>com.edm</groupId>
+    <artifactId>supplier</artifactId>
     <version>1.0.8-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>The Mailgun SDK for Java enables Java developers to work with Mailgun API
+    <description>The edm-supplier SDK for Java enables Java developers to work with Mailgun API
         efficiently.
     </description>
-    <url>https://mailgun.com</url>
+    <url>https://xfei.com</url>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -273,18 +273,18 @@
         </license>
     </licenses>
 
-    <scm>
-        <connection>scm:git:git://github.com/mailgun/mailgun-java.git</connection>
-        <developerConnection>scm:git:ssh://github.com:mailgun/mailgun-java.git</developerConnection>
-        <url>https://github.com/mailgun/mailgun-java/tree/main</url>
-    </scm>
+<!--    <scm>-->
+<!--        <connection>scm:git:git://github.com/mailgun/mailgun-java.git</connection>-->
+<!--        <developerConnection>scm:git:ssh://github.com:mailgun/mailgun-java.git</developerConnection>-->
+<!--        <url>https://github.com/mailgun/mailgun-java/tree/main</url>-->
+<!--    </scm>-->
 
     <developers>
         <developer>
-            <name>Mailgun</name>
-            <email>api@mailgun.com</email>
-            <organization>Mailgun</organization>
-            <organizationUrl>https://www.mailgun.com</organizationUrl>
+            <name>edm-supplier</name>
+            <email>api@xfei.com</email>
+            <organization>xfei</organization>
+            <organizationUrl>https://www.xfei.com</organizationUrl>
         </developer>
     </developers>
 
