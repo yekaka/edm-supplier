@@ -31,7 +31,7 @@ class SendCloudClientTest {
         SendCloudDomainRequest request = SendCloudDomainRequest.builder()
                 .apiKey(apiKey)
                 .apiUser(apiUser)
-                .name("yeyiyi11.tjjij.com")
+                .name("xx.xx.com")
                 .build();
         SendCloudBaseResponse<?> response = sendCloudDomainsApi.list(request);
         System.out.println(response.toString());
