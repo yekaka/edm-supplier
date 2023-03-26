@@ -24,7 +24,7 @@ public class MillionUploadResponse {
     private String fileName;
 
     /**
-     * in_progress/
+     * in_progress/in_queue_to_start/finished
      */
     private String status;
 

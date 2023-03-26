@@ -30,6 +30,7 @@
         <junit-jupiter.version>5.9.1</junit-jupiter.version>
         <wiremock.version>2.27.2</wiremock.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <commons-io.version>2.11.0</commons-io.version>
     </properties>
 
     <dependencies>
@@ -95,6 +96,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
         </dependency>
 
         <!-- TESTS -->

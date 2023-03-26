@@ -1,11 +1,9 @@
 package com.xfei.millionverifier.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xfei.mailgun.api.MailgunApi;
 import com.xfei.mailgun.form.FormEncoder;
 import com.xfei.util.ConsoleLogger;
 import static com.xfei.util.Constants.MILLION_VERIFIER_DEFAULT_BASE_URL_US_REGION;
-import com.xfei.util.MailgunApiUtil;
 import com.xfei.util.ObjectMapperUtil;
 import feign.AsyncClient;
 import feign.Client;
@@ -13,7 +11,6 @@ import feign.Feign;
 import feign.Logger;
 import feign.Request;
 import feign.Retryer;
-import feign.auth.BasicAuthRequestInterceptor;
 import feign.codec.ErrorDecoder;
 import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
@@ -36,8 +33,8 @@ public class MillionVerifierClient {
     private static final FieldQueryMapEncoder QUERY_MAP_ENCODER = new FieldQueryMapEncoder();
 
 
-    public MillionVerifierClientBuilder config(String baseUrl) {
-        return new MillionVerifierClient.MillionVerifierClientBuilder(baseUrl);
+    public MillionVerifierClientBuilder config(String url) {
+        return new MillionVerifierClient.MillionVerifierClientBuilder(url);
     }
 
     public MillionVerifierClientBuilder config() {
@@ -55,10 +52,13 @@ public class MillionVerifierClient {
                 Executors.newSingleThreadExecutor()
         );
 
+        /**
+         * 默认批量操作；单个操作单独传url
+         */
         private String baseUrl = MILLION_VERIFIER_DEFAULT_BASE_URL_US_REGION;
 
-        private MillionVerifierClientBuilder(String baseUrl) {
-            this.baseUrl = baseUrl;
+        private MillionVerifierClientBuilder(String url) {
+            this.baseUrl = url;
         }
 
         public MillionVerifierClientBuilder() {
@@ -141,9 +141,9 @@ public class MillionVerifierClient {
         }
 
         @SuppressWarnings("unchecked")
-        public <T> T createApi(Class<?> apiType,String baseUrl) {
+        public <T> T createApi(Class<?> apiType,String url) {
             return getFeignBuilder()
-                    .target((Class<T>) apiType, baseUrl);
+                    .target((Class<T>) apiType, url);
         }
 
         private Feign.Builder getFeignBuilder() {
