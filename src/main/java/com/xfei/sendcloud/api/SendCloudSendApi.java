@@ -10,4 +10,6 @@ import feign.Headers;
  */
 @Headers("Accept: application/json")
 public interface SendCloudSendApi {
+    //mail/send
+
 }

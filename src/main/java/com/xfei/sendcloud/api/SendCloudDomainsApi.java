@@ -2,7 +2,9 @@ package com.xfei.sendcloud.api;
 
 import com.xfei.sendcloud.model.SendCloudBaseResponse;
 import com.xfei.sendcloud.model.domains.SendCloudDomainAddRequest;
+import com.xfei.sendcloud.model.domains.SendCloudDomainCheckRequest;
 import com.xfei.sendcloud.model.domains.SendCloudDomainRequest;
+import com.xfei.sendcloud.model.domains.SendCloudDomainUpdateRequest;
 import feign.Headers;
 import feign.RequestLine;
 
@@ -20,4 +22,10 @@ public interface SendCloudDomainsApi {
 
     @RequestLine("POST /domain/add")
     SendCloudBaseResponse<?> add(SendCloudDomainAddRequest request);
+
+    @RequestLine("POST /domain/update")
+    SendCloudBaseResponse<?> update(SendCloudDomainUpdateRequest request);
+
+    @RequestLine("POST /domain/checkConfig")
+    SendCloudBaseResponse<?> checkConfig(SendCloudDomainCheckRequest request);
 }

@@ -14,7 +14,7 @@ import lombok.ToString;
  * @date 2023/03/26 15:44
  */
 
-@Getter
+@Data
 @ToString
 @EqualsAndHashCode
 @Builder
