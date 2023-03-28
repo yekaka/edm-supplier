@@ -8,6 +8,6 @@ import feign.Headers;
  * @author yzq
  * @date 2023/03/26 15:10
  */
-@Headers("Accept: application/json")
+@Headers({"Content-Type: multipart/form-data", "Accept: application/json"})
 public interface SendCloudStatApi {
 }
