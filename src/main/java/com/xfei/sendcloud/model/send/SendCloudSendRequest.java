@@ -4,6 +4,7 @@ import feign.form.FormProperty;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.ToString;
 
 /**
@@ -61,7 +62,4 @@ public class SendCloudSendRequest {
      */
     @FormProperty("respEmailId")
     boolean respEmailId = true;
-
-    public SendCloudSendRequest() {
-    }
 }

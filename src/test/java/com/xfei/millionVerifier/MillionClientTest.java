@@ -41,14 +41,14 @@ class MillionClientTest {
 
     @Test
     void uploadVerifyEmailAddressTest() throws IOException {
-        FormData formData = ClientUtil.getFormData("text/plain", "email.txt", "/Users/xxxxx/Downloads/email.txt");
-        MillionUploadRequest request = MillionUploadRequest.builder()
-                .formData(formData)
-                .build();
-
-        MillionUploadResponse response = millionVerifierApi.uploadFile(apiKey, request);
-
-        System.out.println(response.toString());
+//        FormData formData = ClientUtil.getFormData("text/plain", "email.txt", "/Users/xxxxx/Downloads/email.txt");
+//        MillionUploadRequest request = MillionUploadRequest.builder()
+//                .formData(formData)
+//                .build();
+//
+//        MillionUploadResponse response = millionVerifierApi.uploadFile(apiKey, request);
+//
+//        System.out.println(response.toString());
     }
 
     @Test
