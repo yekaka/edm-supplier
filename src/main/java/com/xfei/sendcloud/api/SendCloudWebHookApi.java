@@ -10,7 +10,7 @@ import feign.RequestLine;
 /**
  * sendCloud-webhook操作 api
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/26 15:12
  */
 @Headers({"Content-Type: multipart/form-data", "Accept: application/json"})

@@ -11,7 +11,7 @@ import feign.RequestLine;
 /**
  * sendCloud-用户设置（固定发件人） api
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/26 15:10
  */
 @Headers({"Content-Type: multipart/form-data", "Accept: application/json"})

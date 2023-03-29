@@ -9,7 +9,7 @@ import lombok.extern.jackson.Jacksonized;
 /**
  * 单个邮箱的校验返回信息
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/24 20:53
  */
 @Value

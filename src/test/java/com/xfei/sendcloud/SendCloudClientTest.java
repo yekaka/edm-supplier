@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 /**
  * sendCloud测试；(测试发现该服务商的接口 查询数据都存在缓存；这边注意下)
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/24 20:45
  */
 class SendCloudClientTest {

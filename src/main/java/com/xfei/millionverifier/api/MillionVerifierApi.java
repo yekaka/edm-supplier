@@ -11,7 +11,7 @@ import feign.Response;
 /**
  * MillionVerifier-对应的接口
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/24 17:23
  */
 @Headers({"User-Agent:curl/7.64.1"})

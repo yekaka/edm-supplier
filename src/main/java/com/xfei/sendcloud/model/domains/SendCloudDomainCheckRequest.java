@@ -9,7 +9,7 @@ import lombok.ToString;
 /**
  * sendCloud-域名校验
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/26 15:44
  */
 

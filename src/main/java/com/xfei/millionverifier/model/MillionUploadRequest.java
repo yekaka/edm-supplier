@@ -10,7 +10,7 @@ import lombok.ToString;
 /**
  * 批量邮箱的校验返回信息 （支持 .txt / .csv / .xlsx）
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/24 20:53
  */
 @Getter

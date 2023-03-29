@@ -9,7 +9,7 @@ import lombok.ToString;
 /**
  * 删除固定发件人
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/28 20:01
  */
 @Data

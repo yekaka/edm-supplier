@@ -9,7 +9,7 @@ import lombok.ToString;
 /**
  * 邮件发送主体信息
  *
- * @author yzq
+ * @author yyy
  * @date 2023/03/28 19:08
  */
 @Data
